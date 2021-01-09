@@ -1,0 +1,43 @@
+/* Reset */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/*  */
+body {
+  display: grid;
+  grid-template-rows: 150% 1fr;
+  background-color: #ff5252;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#app-grid{
+  place-self: center;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  justify-items: center;
+}
+
+.body-grid{
+  display: table;
+  background: white;
+  border: 3px solid black;
+}
+
+.grid-cell {
+  background-color: #ffffff;
+  min-width: 50px;
+  height: 50px;
+  text-align: center;
+  display: table-cell;
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+.grid-cell.giallo {
+  background-color: rgb(255, 255, 0);
+}
+.grid-cell.verde {
+  background-color: rgb(51, 255, 51);
+}

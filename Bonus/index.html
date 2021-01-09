@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Grid Test</title>
+</head>
+
+<body>
+  <div id="app-grid">
+    <main class="body-grid">
+      <div v-for="(row, n) in grid" class="grid-row">
+        <div v-for="(cell, m) in row" :class="((cell.num=='') ? ('') : (cell.num<=5) ? ('giallo') : 'verde')" class="grid-cell"
+          @click="getRandomNumber(n,m)">
+          {{cell.num}}
+        </div>
+      </div>
+    </main>
+    <!-- /.body_grid -->
+  </div>
+  
+
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
